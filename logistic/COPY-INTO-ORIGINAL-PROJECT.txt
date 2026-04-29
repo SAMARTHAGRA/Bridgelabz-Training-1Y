@@ -1,0 +1,23 @@
+The app did not give write permission to E:\workspace\RouteTrackerSystem,
+so these files are prepared here.
+
+To use them in your original project:
+
+1. Copy all .java files from:
+   RouteTrackerSystem-mysql/src/
+
+2. Paste them into:
+   E:\workspace\RouteTrackerSystem\src\
+
+3. Copy database.sql, compile.bat, run.bat, and the lib folder from:
+   RouteTrackerSystem-mysql/
+
+4. Paste them into:
+   E:\workspace\RouteTrackerSystem\
+
+5. Put mysql-connector-j-9.x.x.jar inside:
+   E:\workspace\RouteTrackerSystem\lib\
+
+6. Run database.sql in MySQL Workbench.
+7. Double-click compile.bat.
+8. Double-click run.bat.

@@ -1,0 +1,64 @@
+STEP BY STEP: Connect Java Route Tracker to local MySQL
+
+PART 1: Create the database
+
+1. Open MySQL Workbench.
+2. Click your connection: Local instance MySQL80.
+3. Enter your MySQL password if it asks.
+4. Click File > Open SQL Script.
+5. Open this file:
+   RouteTrackerSystem-mysql/database.sql
+6. Click the yellow lightning button to run it.
+7. On the left side, click refresh near Schemas.
+8. You should see:
+   route_tracker_system
+
+PART 2: Add the JDBC file
+
+1. Open this page in your browser:
+   https://dev.mysql.com/downloads/connector/j/
+2. Choose Platform Independent.
+3. Download the ZIP Archive.
+4. If it asks for login, click:
+   No thanks, just start my download.
+5. Extract the ZIP file.
+6. Copy the jar file into:
+   RouteTrackerSystem-mysql/lib/
+
+   The jar name looks like:
+   mysql-connector-j-9.6.0.jar
+
+PART 3: Run without IntelliJ
+
+1. Double-click:
+   compile.bat
+2. If it says Compile successful, double-click:
+   run.bat
+3. When the program asks:
+   MySQL username
+   type:
+   root
+4. When it asks password:
+   type your MySQL password.
+
+PART 4: Run in IntelliJ
+
+1. Open IntelliJ.
+2. Open your project.
+3. Click File > Project Structure.
+4. Click Modules.
+5. Click Dependencies.
+6. Click +.
+7. Click JARs or Directories.
+8. Select the jar file from:
+   RouteTrackerSystem-mysql/lib/
+9. Click Apply.
+10. Click OK.
+11. Run Main.java.
+
+If you see "Database connected!", it is working.
+
+If you see "ClassNotFoundException", the jar was not added correctly.
+If you see "Unknown database", run database.sql first.
+If you see "Access denied", your MySQL password is wrong.
+If you see "Communications link failure", MySQL Server is not running.
